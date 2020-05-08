@@ -59,10 +59,10 @@ class MenuThread extends Thread{
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        int set_r, set_p_orbit, set_t_rotasi, set_t_revolusi;
+        float set_r, set_p_orbit, set_t_rotasi, set_t_revolusi;
         int menu;
         char yes_no;
-        Formula formula = new Formula();
+        Bola bola = new Bola();
         Mercury mercury = new Mercury();
         Venus venus = new Venus();
         Earth earth = new Earth();
@@ -93,24 +93,25 @@ public class Main {
                     System.out.println("======MERCURY======");
                     System.out.println("Input radius : ");
                     set_r = input.nextInt();
+                    mercury.setVolumeAndSurface(set_r);
+                    mercury.setPanjangLintasanRotasi(set_r);
+                    System.out.println("Panjang lintasan rotasi atau keliling planet : " + mercury.getPanjangLintasanRotasi());
+                    System.out.println("Mercury's Volume : " + mercury.getMercuryVolume());
+                    System.out.println("Mercury's Surface : " + mercury.getMercurySurface());
 
-                    formula.Volume(set_r);
-                    System.out.println("Mercury's Volume : " + formula.getVolume());
-                    formula.Surface(set_r);
-                    System.out.println("Mercury's Surface : " + formula.getSurface());
-                    //System.out.println("Input panjang orbit : ");
-                   //set_p_orbit = input.nextInt();
-                    //System.out.println("Input kala rotasi : ");
-                    //set_t_rotasi = input.nextInt();
-                    //System.out.println("Input kala revolusi : ");
-                    //set_t_revolusi = input.nextInt();
+                    System.out.println("Input panjang lintasan revolusi : ");
+                    set_p_orbit = input.nextInt();
+                    System.out.println("Input kala rotasi : ");
+                    set_t_rotasi = input.nextInt();
+                    mercury.setRotationVelocity(set_t_rotasi);
+                    System.out.println("Input kala revolusi : ");
+                    set_t_revolusi = input.nextInt();
+                    mercury.setRevolutionVelocity(set_p_orbit, set_t_revolusi);
 
-                    //Output:
-                    //panjang_lintasan_rotasi atau keliling
-                    //luas_permukaan
-                    //volume
-                    //kecepatan_rotasi
-                    //kecepatan_revolusi
+                    System.out.println("Kecepatan rotasi : " + mercury.getRotationVelocity());
+                    System.out.println("Kecepatan revolusi : " + mercury.getRevolutionVelocity());
+
+                    //Masih kurang :
                     //ilustrasi volume
                     //Ilustrasi pergerakan
                     break;
@@ -126,10 +127,9 @@ public class Main {
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
 
-                    formula.Volume(set_r);
-                    System.out.println("Venus's Volume : " + formula.getVolume());
-                    formula.Surface(set_r);
-                    System.out.println("Venus's Surface : " + formula.getSurface());
+                    venus.setVolumeAndSurface(set_r);
+                    System.out.println("Venus's Volume : " + venus.getVenusVolume());
+                    System.out.println("Venus's Surface : " + venus.getVenusSurface());
                     break;
 
                 case 3:
@@ -143,10 +143,9 @@ public class Main {
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
 
-                    formula.Volume(set_r);
-                    System.out.println("Earth's Volume : " + formula.getVolume());
-                    formula.Surface(set_r);
-                    System.out.println("Earth's Surface : " + formula.getSurface());
+                    earth.setVolumeAndSurface(set_r);
+                    System.out.println("Earth's Volume : " + earth.getEarthVolume());
+                    System.out.println("Earth's Surface : " + earth.getEarthSurface());
                     break;
 
                 case 4:
@@ -160,10 +159,9 @@ public class Main {
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
 
-                    formula.Volume(set_r);
-                    System.out.println("Mars' Volume : " + formula.getVolume());
-                    formula.Surface(set_r);
-                    System.out.println("Mars' Surface : " + formula.getSurface());
+                    mars.setVolumeAndSurface(set_r);
+                    System.out.println("Mars' Volume : " + mars.getMarsVolume());
+                    System.out.println("Mars' Surface : " + mars.getMarsSurface());
                     break;
 
                 case 5:
@@ -177,10 +175,9 @@ public class Main {
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
 
-                    formula.Volume(set_r);
-                    System.out.println("Jupyter's Volume : " + formula.getVolume());
-                    formula.Surface(set_r);
-                    System.out.println("Jupyter's Surface : " + formula.getSurface());
+                    jupyter.setVolumeAndSurface(set_r);
+                    System.out.println("Jupyter's Volume : " + jupyter.getJupyterVolume());
+                    System.out.println("Jupyter's Surface : " + jupyter.getJupyterSurface());
                     break;
 
                 case 6:
@@ -194,10 +191,9 @@ public class Main {
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
 
-                    formula.Volume(set_r);
-                    System.out.println("Saturn's Volume : " + formula.getVolume());
-                    formula.Surface(set_r);
-                    System.out.println("Saturn's Surface : " + formula.getSurface());
+                    saturn.setVolumeAndSurface(set_r);
+                    System.out.println("Saturn's Volume : " + saturn.getSaturnVolume());
+                    System.out.println("Saturn's Surface : " + saturn.getSaturnSurface());
                     break;
 
                 case 7:
@@ -211,10 +207,9 @@ public class Main {
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
 
-                    formula.Volume(set_r);
-                    System.out.println("Uranus's Volume : " + formula.getVolume());
-                    formula.Surface(set_r);
-                    System.out.println("Uranus's Surface : " + formula.getSurface());
+                    uranus.setVolumeAndSurface(set_r);
+                    System.out.println("Uranus's Volume : " + uranus.getUranusVolume());
+                    System.out.println("Uranus's Surface : " + uranus.getUranusSurface());
                     break;
 
                 case 8:
@@ -228,10 +223,9 @@ public class Main {
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
 
-                    formula.Volume(set_r);
-                    System.out.println("Neptune's Volume : " + formula.getVolume());
-                    formula.Surface(set_r);
-                    System.out.println("Neptune's Surface : " + formula.getSurface());
+                    neptune.setVolumeAndSurface(set_r);
+                    System.out.println("Neptune's Volume : " + neptune.getNeptuneVolume());
+                    System.out.println("Neptune's Surface : " + neptune.getNeptuneSurface());
                     break;
 
                 default:
