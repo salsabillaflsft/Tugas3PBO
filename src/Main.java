@@ -118,114 +118,163 @@ public class Main {
 
                 case 2:
                     System.out.println("======VENUS======");
-                    System.out.println("Input jari-jari : ");
+                    System.out.println("Input radius : ");
                     set_r = input.nextInt();
-                    System.out.println("Input panjang orbit : ");
+                    venus.setVolumeAndSurface(set_r);
+                    venus.setPanjangLintasanRotasi(set_r);
+                    System.out.println("Panjang lintasan rotasi atau keliling planet : " + venus.getPanjangLintasanRotasi());
+                    System.out.println("Volume : " + venus.getVenusVolume());
+                    System.out.println("Luas Permukaan : " + venus.getVenusSurface());
+
+                    System.out.println("Input panjang lintasan revolusi : ");
                     set_p_orbit = input.nextInt();
                     System.out.println("Input kala rotasi : ");
                     set_t_rotasi = input.nextInt();
+                    venus.setRotationVelocity(set_t_rotasi);
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
+                    venus.setRevolutionVelocity(set_p_orbit, set_t_revolusi);
 
-                    venus.setVolumeAndSurface(set_r);
-                    System.out.println("Venus's Volume : " + venus.getVenusVolume());
-                    System.out.println("Venus's Surface : " + venus.getVenusSurface());
+                    System.out.println("Kecepatan rotasi : " + venus.getRotationVelocity());
+                    System.out.println("Kecepatan revolusi : " + venus.getRevolutionVelocity());
                     break;
 
                 case 3:
                     System.out.println("======EARTH======");
-                    System.out.println("Input jari-jari : ");
+                    System.out.println("Input radius : ");
                     set_r = input.nextInt();
-                    System.out.println("Input panjang orbit : ");
+                    earth.setVolumeAndSurface(set_r);
+                    earth.setPanjangLintasanRotasi(set_r);
+                    System.out.println("Panjang lintasan rotasi atau keliling planet : " + earth.getPanjangLintasanRotasi());
+                    System.out.println("Volume : " + earth.getEarthVolume());
+                    System.out.println("Surface : " + earth.getEarthSurface());
+
+                    System.out.println("Input panjang lintasan revolusi : ");
                     set_p_orbit = input.nextInt();
                     System.out.println("Input kala rotasi : ");
                     set_t_rotasi = input.nextInt();
+                    earth.setRotationVelocity(set_t_rotasi);
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
+                    earth.setRevolutionVelocity(set_p_orbit, set_t_revolusi);
 
-                    earth.setVolumeAndSurface(set_r);
-                    System.out.println("Earth's Volume : " + earth.getEarthVolume());
-                    System.out.println("Earth's Surface : " + earth.getEarthSurface());
+                    System.out.println("Kecepatan rotasi : " + earth.getRotationVelocity());
+                    System.out.println("Kecepatan revolusi : " + earth.getRevolutionVelocity());
                     break;
 
                 case 4:
                     System.out.println("======MARS======");
-                    System.out.println("Input jari-jari : ");
+                    System.out.println("Input radius : ");
                     set_r = input.nextInt();
-                    System.out.println("Input panjang orbit : ");
+                    mars.setVolumeAndSurface(set_r);
+                    mars.setPanjangLintasanRotasi(set_r);
+                    System.out.println("Panjang lintasan rotasi atau keliling planet : " + mars.getPanjangLintasanRotasi());
+                    System.out.println("Volume : " + mars.getMarsVolume());
+                    System.out.println("Surface : " + mars.getMarsSurface());
+
+                    System.out.println("Input panjang lintasan revolusi : ");
                     set_p_orbit = input.nextInt();
                     System.out.println("Input kala rotasi : ");
                     set_t_rotasi = input.nextInt();
+                    mars.setRotationVelocity(set_t_rotasi);
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
+                    mars.setRevolutionVelocity(set_p_orbit, set_t_revolusi);
 
-                    mars.setVolumeAndSurface(set_r);
-                    System.out.println("Mars' Volume : " + mars.getMarsVolume());
-                    System.out.println("Mars' Surface : " + mars.getMarsSurface());
+                    System.out.println("Kecepatan rotasi : " + mars.getRotationVelocity());
+                    System.out.println("Kecepatan revolusi : " + mars.getRevolutionVelocity());
                     break;
 
                 case 5:
                     System.out.println("======JUPYTER======");
-                    System.out.println("Input jari-jari : ");
+                    System.out.println("Input radius : ");
                     set_r = input.nextInt();
-                    System.out.println("Input panjang orbit : ");
+                    jupyter.setVolumeAndSurface(set_r);
+                    jupyter.setPanjangLintasanRotasi(set_r);
+                    System.out.println("Panjang lintasan rotasi atau keliling planet : " + jupyter.getPanjangLintasanRotasi());
+                    System.out.println("Volume : " + jupyter.getJupyterVolume());
+                    System.out.println("Surface : " + jupyter.getJupyterSurface());
+
+                    System.out.println("Input panjang lintasan revolusi : ");
                     set_p_orbit = input.nextInt();
                     System.out.println("Input kala rotasi : ");
                     set_t_rotasi = input.nextInt();
+                    jupyter.setRotationVelocity(set_t_rotasi);
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
+                    jupyter.setRevolutionVelocity(set_p_orbit, set_t_revolusi);
 
-                    jupyter.setVolumeAndSurface(set_r);
-                    System.out.println("Jupyter's Volume : " + jupyter.getJupyterVolume());
-                    System.out.println("Jupyter's Surface : " + jupyter.getJupyterSurface());
+                    System.out.println("Kecepatan rotasi : " + jupyter.getRotationVelocity());
+                    System.out.println("Kecepatan revolusi : " + jupyter.getRevolutionVelocity());
                     break;
 
                 case 6:
                     System.out.println("======SATURN======");
-                    System.out.println("Input jari-jari : ");
+                    System.out.println("Input radius : ");
                     set_r = input.nextInt();
-                    System.out.println("Input panjang orbit : ");
+                    saturn.setVolumeAndSurface(set_r);
+                    saturn.setPanjangLintasanRotasi(set_r);
+                    System.out.println("Panjang lintasan rotasi atau keliling planet : " + saturn.getPanjangLintasanRotasi());
+                    System.out.println("Volume : " + saturn.getSaturnVolume());
+                    System.out.println("Surface : " + saturn.getSaturnSurface());
+
+                    System.out.println("Input panjang lintasan revolusi : ");
                     set_p_orbit = input.nextInt();
                     System.out.println("Input kala rotasi : ");
                     set_t_rotasi = input.nextInt();
+                    saturn.setRotationVelocity(set_t_rotasi);
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
+                    saturn.setRevolutionVelocity(set_p_orbit, set_t_revolusi);
 
-                    saturn.setVolumeAndSurface(set_r);
-                    System.out.println("Saturn's Volume : " + saturn.getSaturnVolume());
-                    System.out.println("Saturn's Surface : " + saturn.getSaturnSurface());
+                    System.out.println("Kecepatan rotasi : " + saturn.getRotationVelocity());
+                    System.out.println("Kecepatan revolusi : " + saturn.getRevolutionVelocity());
                     break;
 
                 case 7:
                     System.out.println("======URANUS======");
-                    System.out.println("Input jari-jari : ");
+                    System.out.println("Input radius : ");
                     set_r = input.nextInt();
-                    System.out.println("Input panjang orbit : ");
+                    uranus.setVolumeAndSurface(set_r);
+                    uranus.setPanjangLintasanRotasi(set_r);
+                    System.out.println("Panjang lintasan rotasi atau keliling planet : " + uranus.getPanjangLintasanRotasi());
+                    System.out.println("Volume : " + uranus.getUranusVolume());
+                    System.out.println("Surface : " + uranus.getUranusSurface());
+
+                    System.out.println("Input panjang lintasan revolusi : ");
                     set_p_orbit = input.nextInt();
                     System.out.println("Input kala rotasi : ");
                     set_t_rotasi = input.nextInt();
+                    uranus.setRotationVelocity(set_t_rotasi);
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
+                    uranus.setRevolutionVelocity(set_p_orbit, set_t_revolusi);
 
-                    uranus.setVolumeAndSurface(set_r);
-                    System.out.println("Uranus's Volume : " + uranus.getUranusVolume());
-                    System.out.println("Uranus's Surface : " + uranus.getUranusSurface());
+                    System.out.println("Kecepatan rotasi : " + uranus.getRotationVelocity());
+                    System.out.println("Kecepatan revolusi : " + uranus.getRevolutionVelocity());
                     break;
 
                 case 8:
                     System.out.println("======NEPTUNE======");
-                    System.out.println("Input jari-jari : ");
+                    System.out.println("Input radius : ");
                     set_r = input.nextInt();
-                    System.out.println("Input panjang orbit : ");
+                    neptune.setVolumeAndSurface(set_r);
+                    neptune.setPanjangLintasanRotasi(set_r);
+                    System.out.println("Panjang lintasan rotasi atau keliling planet : " + neptune.getPanjangLintasanRotasi());
+                    System.out.println("Volume : " + neptune.getNeptuneVolume());
+                    System.out.println("Surface : " + neptune.getNeptuneSurface());
+
+                    System.out.println("Input panjang lintasan revolusi : ");
                     set_p_orbit = input.nextInt();
                     System.out.println("Input kala rotasi : ");
                     set_t_rotasi = input.nextInt();
+                    neptune.setRotationVelocity(set_t_rotasi);
                     System.out.println("Input kala revolusi : ");
                     set_t_revolusi = input.nextInt();
+                    neptune.setRevolutionVelocity(set_p_orbit, set_t_revolusi);
 
-                    neptune.setVolumeAndSurface(set_r);
-                    System.out.println("Neptune's Volume : " + neptune.getNeptuneVolume());
-                    System.out.println("Neptune's Surface : " + neptune.getNeptuneSurface());
+                    System.out.println("Kecepatan rotasi : " + neptune.getRotationVelocity());
+                    System.out.println("Kecepatan revolusi : " + neptune.getRevolutionVelocity());
                     break;
 
                 default:
