@@ -1,9 +1,13 @@
 public class Bola {
-    float r, p_orbit, volume, surface, keliling, t_rotation, t_revolution, v_rotation, v_revolution;
+    float r, p_orbit, volume, surface, keliling, t_rotation, t_revolution, v_rotation, v_revolution,diameter;
 
     public void Volume(float r) {
         this.r = r;
         volume = (float) (4 * 3.14 * Math.pow(r,3)/3);
+    }
+    public void Diameter(float r) {
+        this.r = r;
+        diameter =  r*2;
     }
 
     void Surface(float r) {
@@ -21,6 +25,8 @@ public class Bola {
     void RevolutionVelocity(float p_orbit, float t_revolution) {
         v_revolution = p_orbit / t_revolution;
     }
+
+    public float getDiameter() {return diameter;}
 
     public float getVolume(float r) {
         return volume;
