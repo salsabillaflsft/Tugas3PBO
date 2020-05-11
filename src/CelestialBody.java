@@ -1,13 +1,6 @@
 import java.awt.*;
 
 public class CelestialBody{
-    /*private float r = 0;
-    private float volume = 0;
-    private float surface = 0;
-    private float keliling = 0;
-    private double ro_velocity = 0;
-    private double re_velocity = 0;*/
-   // private int r = 0;
     private int mass = 0;
     private int diameter = 0;
     private double xLoc = 0;
@@ -45,7 +38,7 @@ public class CelestialBody{
     public int getMass(){
         return mass;
     }
-    public int getDiameter2() {return diameter;}
+    public int getDiameter() {return diameter;}
     public boolean getDescVisible() {
         return visible;
     }

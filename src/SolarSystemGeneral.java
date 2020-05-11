@@ -17,87 +17,79 @@ public class SolarSystemGeneral extends JPanel{
     int clicked = -1;
     int r,diameter;
     Bola bola = new Bola();
-    //Sun sun = new Sun();
-    Mercury mercury = new Mercury();
-    Venus venus = new Venus();
-    Earth earth = new Earth();
-    Mars mars = new Mars();
-    Jupyter jupyter = new Jupyter();
-    Saturn saturn = new Saturn();
-    Uranus uranus = new Uranus();
-    Neptune neptune = new Neptune();
 
     public SolarSystemGeneral() {
         model = new Model();
         model.setPreferredSize(new Dimension(1200, 1200));
         add(model);
 
-        celestialBodies[0] = new CelestialBody(600, 450, -4.7, 0, 9, mercury.getDiameter() , Color.GRAY, 1000); //Mercury
-        celestialBodies[1] = new CelestialBody(752, 400, 0, 2.5, 900, venus.getDiameter(), new Color(207,153,52), 1000); //Venus
-        celestialBodies[2] = new CelestialBody(600, 150, 1.8, 0, 900, earth.getDiameter(), Color.BLUE, 2000); //Earth
-        celestialBodies[3] = new CelestialBody(650, -50, 1.2, 0, 900, mars.getDiameter(), Color.RED, 2000); //Mars
-        celestialBodies[4] = new CelestialBody(600, -100, 1.2, 0, 900, jupyter.getDiameter(), new Color(255,140,0), 2000); //Jupiter
-        celestialBodies[5] = new CelestialBody(600, -150, 1.2, 0, 900, saturn.getDiameter(), new Color(112,128,144), 2000); //Saturn
-        celestialBodies[6] = new CelestialBody(600, -175, 1.2, 0, 900, uranus.getDiameter(), new Color(196,233,238), 2000); //Uranus
-        celestialBodies[7] = new CelestialBody(0, 400, 0, -1.2, 900, neptune.getDiameter(), new Color(66, 98, 243), 2000);//Neptune
+        celestialBodies[0] = new CelestialBody(600, 450, -4.7, 0, 9, 8 , new Color(144, 149, 149), 1000); //Mercury
+        celestialBodies[1] = new CelestialBody(752, 400, -0, -2.5, 900, 12, new Color(199, 100, 63), 1000); //Venus
+        celestialBodies[2] = new CelestialBody(600, 150, 1.8, 0, 900, 11, new Color(2, 128, 144), 2000); //Earth
+        celestialBodies[3] = new CelestialBody(650, -50, 1.2, 0, 900, 7, new Color(180, 49, 0), 2000); //Mars
+        celestialBodies[4] = new CelestialBody(600, -100, 1.2, 0, 900, 20, new Color(255,140,0), 2000); //Jupiter
+        celestialBodies[5] = new CelestialBody(600, -150, 1.2, 0, 900, 15, new Color(199, 146, 79), 2000); //Saturn
+        celestialBodies[6] = new CelestialBody(600, -175, 1.2, 0, 900, 15, new Color(0, 168, 150), 2000); //Uranus
+        celestialBodies[7] = new CelestialBody(0, 400, 0, -1.2, 900, 13, new Color(5, 102, 141), 2000);//Neptune
 
 
-        celestialBodies[8] = new CelestialBody(600, 400, .1, 0, 1000, 30, Color.ORANGE, 0);//Sun
+        celestialBodies[8] = new CelestialBody(600, 400, .1, 0, 1000, 30, new Color(244, 140, 6), 0);//Sun
+
 
         setBackground(Color.BLACK);
 
         description = new String[][]{
-                {"Mercury","Diameter: " + celestialBodies[0].getDiameter2()*1058+ " kilometers",
+                {"Mercury","Diameter: " + celestialBodies[0].getDiameter()*1058+ " kilometers",
                         "Mass: 0.330 x 10^(24) kg",
                         "Atmosphere Type: Thin",
                         "Average Temperature: 167 degrees C",
                         "Average Day Length: 3.1 Earth Days",
                         "Inner Planet - Closest to the Sun"},
-                {"Venus","Diameter: " + venus.getDiameter()*1058+ " kilometers",
+                {"Venus","Diameter: " + celestialBodies[1].getDiameter()*1058+ " kilometers",
                         "Mass: 4.87 x 10^(24) kg",
                         "Atmosphere Type: Medium Thin",
                         "Average Temperature: 464 degrees C",
                         "Average Day Length: .9 Earth Days",
                         "Inner Planet - Known as Earth's Twin"
                 },
-                { "Earth","Diameter: " + earth.getDiameter()*1058+ " kilometers",
+                { "Earth","Diameter: " + celestialBodies[2].getDiameter()*1058+ " kilometers",
                         "Mass: 5.97 x 10^(24) kg",
                         "Atmosphere Type: Thin",
                         "Average Temperature: 15 degrees C",
                         "Average Day Length: 1 Earth Day",
                         "Inner Planet - Our Home, the Blue Marble"
                 },
-                { "Mars","Diameter: " + mars.getDiameter()*1058+ " kilometers",
+                { "Mars","Diameter: " + celestialBodies[3].getDiameter()*1058+ " kilometers",
                         "Mass: 0.642 x 10^(24) kg",
                         "Atmosphere Type: Medium Thick",
                         "Average Temperature: -65 degrees C",
                         "Average Day Length: .8 Earth Days",
                         " Inner Planet - Known as the Red Planet"
                 },
-                {"Jupiter","Diameter: " + jupyter.getDiameter()*1058+ " kilometers",
+                {"Jupiter","Diameter: " + celestialBodies[4].getDiameter()*1058+ " kilometers",
                         "Mass: 1898 x 10^(24) kg",
                         "Atmosphere Type: Thick",
                         "Average Temperature: -110 degrees C",
                         "Average Day Length: .6 Earth Days",
                         "Outer Planet - Largest planet in the Solar System"},
-                {"Saturn","Diameter: " + saturn.getDiameter()*3058+ " kilometers",
+                {"Saturn","Diameter: " + celestialBodies[5].getDiameter()*3058+ " kilometers",
                         "Mass: 568 x 10^(24) kg",
                         "Average Temperature: -140 degrees C",
                         "Atmosphere Type: Thick",
                         "Outer Planet - Known for its Rings"},
-                {"Uranus","Diameter: " + uranus.getDiameter()*3058+ " kilometers",
+                {"Uranus","Diameter: " + celestialBodies[6].getDiameter()*3058+ " kilometers",
                         "Mass: 86.8 x 10^(24) kg",
                         "Atmosphere Type: Thick",
                         "Average Temperature: -195 degrees C",
                         "Outer Planet - Interior Composed of Ices and Rock"},
-                {"Neptune","Diameter: " + celestialBodies[7].getDiameter2()*1058+ " kilometers",
+                {"Neptune","Diameter: " + celestialBodies[7].getDiameter()*1058+ " kilometers",
                         "Mass: 102 x 10^(24) kg",
                         "Atmosphere Type: Thin",
                         "Atmosphere Type: Thick",
                         "Average Temperature: -200 degrees C",
                         "Average Day Length: .6 Earth Days",
                         "Outer Planet - Only planet found by mathematical prediction, not empirical observation"},
-                {"Sun","Diameter: " + celestialBodies[8].getDiameter2()*3058+ " kilometers",
+                {"Sun","Diameter: " + celestialBodies[8].getDiameter()*3058+ " kilometers",
                         "Mass: 1.989 × 10^30 kg",
                         "Atmosphere Type: Thick",
                         "Average Temperature: 5505 degrees C",
@@ -106,9 +98,9 @@ public class SolarSystemGeneral extends JPanel{
 
         bimgs[0] = getImage("mercury.jpg"); //stackOverflow
         bimgs[1] = getImage("Venus.jpg");
-        bimgs[2] = getImage("bluemarble.jpg");
+        bimgs[2] = getImage("earth.jpg");
         bimgs[3] = getImage("mars.jpg");
-        bimgs[4] = getImage("jupiterNasa.jpg");
+        bimgs[4] = getImage("jupyter.jpg");
         bimgs[5] = getImage("saturn.jpg");
         bimgs[6] = getImage("uranus.jpg");
         bimgs[7] = getImage("neptune.jpg");
