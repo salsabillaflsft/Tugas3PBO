@@ -73,6 +73,14 @@ public class Main {
         Saturn saturn = new Saturn();
         Uranus uranus = new Uranus();
         Neptune neptune = new Neptune();
+        MercuryIllustration mercuryIllustration = new MercuryIllustration();
+        VenusIllustration venusIllustration = new VenusIllustration();
+        EarthIllustration earthIllustration = new EarthIllustration();
+        MarsIllustration marsIllustration = new MarsIllustration();
+        JupyterIllustration jupyterIllustration = new JupyterIllustration();
+        SaturnIllustration saturnIllustration = new SaturnIllustration();
+        UranusIllustration uranusIllustration = new UranusIllustration();
+        NeptuneIllustration neptuneIllustration = new NeptuneIllustration();
         SolarSystemGeneral solarSystemGeneral = new SolarSystemGeneral();
         //CelestialBody celestialBody = new CelestialBody();
         do{
@@ -96,6 +104,8 @@ public class Main {
                     System.out.println("======MERCURY======");
                     System.out.println("Input radius : ");
                     set_r = input.nextInt();
+                    bola.setR(set_r);
+                    //mercuryIllustration.passingR(set_r);
                     mercury.setVolumeAndSurface(set_r);
                     mercury.setPanjangLintasanRotasi(set_r);
                     mercury.setDiameter(set_r);
@@ -115,8 +125,9 @@ public class Main {
                     System.out.println("Kecepatan rotasi : " + mercury.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + mercury.getRevolutionVelocity());
 
-                    //Masih kurang :
-                    //ilustrasi volume
+                    //Ilustrasi volume
+                    mercuryIllustration.main(null);
+
                     //Ilustrasi pergerakan
                     System.out.println("Lihat ilustrasi pergerakan?  ");
                     yes_no = input.next().charAt(0);
