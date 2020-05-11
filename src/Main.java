@@ -24,7 +24,7 @@ class MenuThread extends Thread{
     @Override
     public void run(){
         synchronized (nRef) {
-            for (int i = 1; i<=9; i++){
+            for (int i = 1; i<=10; i++){
                 if (i == 1) {
                     nRef.printNumber(1,"Mercury");
                 }
@@ -49,8 +49,11 @@ class MenuThread extends Thread{
                 else if (i == 8) {
                     nRef.printNumber(8,"Neptune");
                 }
+                else if (i == 9) {
+                    nRef.printNumber(9,"Illustrasi Pergerakan");
+                }
                 else {
-                    nRef.printNumber(9,"Exit");
+                    nRef.printNumber(10,"Exit");
                 }
             }
         }
@@ -376,6 +379,9 @@ public class Main {
                         solarSystemGeneral.main(null);
                     }
                     break;
+
+                case 9:
+                    solarSystemGeneral.main(null);
 
                 default:
                     break;
