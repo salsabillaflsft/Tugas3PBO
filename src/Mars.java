@@ -24,7 +24,11 @@ public class Mars extends Bola {
         bola.RevolutionVelocity(p_orbit, t_revolution);
         v_revolution = bola.getRevolutionVelocity(p_orbit, t_revolution);
     }
-
+    public void setDiameter(int r) {
+        this.r = r;
+        diameter =  r*2;
+    }
+    public int getDiameter() {return diameter;}
     public float getMarsVolume() {
         return v_mars;
     }

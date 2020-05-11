@@ -1,18 +1,22 @@
-import sun.java2d.Surface;
-
 import java.awt.*;
 
-public class CelestialBody {
-    private double xLoc = 0;
-    private double yLoc = 0;
-    private float mass = 0;
-    private float diameter = 0;
+public class CelestialBody{
+    /*private float r = 0;
     private float volume = 0;
     private float surface = 0;
     private float keliling = 0;
-    private float ro_velocity = 0;
-    private float re_velocity = 0;
+    private double ro_velocity = 0;
+    private double re_velocity = 0;*/
+   // private int r = 0;
+    private int mass = 0;
+    private int diameter = 0;
+    private double xLoc = 0;
+    private double yLoc = 0;
+    private double velX = 0;
+    private double velY = 0;
+    private double speed = 0;
     Color color;
+
     private double acceleration =0;
     private double dirX = 0;
     private double dirY = 0;
@@ -23,40 +27,28 @@ public class CelestialBody {
     int orbitDots[][] = new int[1000][2];
     int counter = 0;
 
-    public CelestialBody (double x, double y, float Diameter, float Volume, float Surface, float Keliling, float rotationVelocity, float revolutionVelocity, Color bodyColor, float Mass)
+    public CelestialBody(double x, double y, double xVelocity, double yVelocity, int bodyMass, int bodyDiameter, Color bodyColor, double bodySpeed)
     {
         xLoc = x;
         yLoc = y;
-        diameter = Diameter;
-        volume = Volume;
-        surface = Surface;
-        keliling = Keliling;
-        ro_velocity = rotationVelocity;
-        re_velocity = revolutionVelocity;
+        velX = xVelocity;
+        velY = yVelocity;
+        mass = bodyMass;
+        diameter = bodyDiameter;
         color = bodyColor;
-        mass = Mass;
+        speed = bodySpeed;
     }
     public double getXPosition(){
         return xLoc;
     }
-    public double getYPosition(){
-        return yLoc;
+    public double getYPosition(){ return yLoc; }
+    public int getMass(){
+        return mass;
     }
-    public float getDiameter() {return diameter;}
-    public float getVolume(){
-        return volume;
+    public int getDiameter2() {return diameter;}
+    public boolean getDescVisible() {
+        return visible;
     }
-    public float getSurface(){
-        return surface;
-    }
-    public float getKeliling(){
-        return keliling;
-    }
-    public float getRo_velocity() { return ro_velocity; }
-    public float getRe_velocity() { return re_velocity; }
-
-    public float getMass(){ return mass; }
-    public boolean getDescVisible() { return visible; }
     public void setDescVisible(boolean b) {
         visible = b;
     }
@@ -64,11 +56,18 @@ public class CelestialBody {
 
     public void move()
     {
-        xLoc += ro_velocity;
-        yLoc += re_velocity;
+        xLoc += velX;
+        yLoc += velY;
     }
 
-    public void update(double StarX, double StarY, float mass) {
+    public boolean hitPlanet(int x, int y, double scale)
+    {
+        return (x>600+(getXPosition()-diameter-600)*scale && x<600+(getXPosition()+diameter-600)*scale &&
+                y>400+(getYPosition()-diameter-400)*scale && y<400+(getYPosition()+diameter-400)*scale);
+    }
+
+    public void update(double StarX, double StarY, int StarMass)
+    {
         if (visible){
             orbitDots[counter][0]=(int)(xLoc+.5);
             orbitDots[counter][1]=(int)(yLoc+.5);
@@ -82,39 +81,39 @@ public class CelestialBody {
         initial = Math.min(distance,initial);
         max = Math.max(distance,max);
 
-        acceleration = mass/distance/distance;
+        acceleration = StarMass/distance/distance;
 
         dirX = (StarX-xLoc)/distance;
         dirY = (StarY-yLoc)/distance;
 
-        ro_velocity += dirX * acceleration;
-        re_velocity += dirY * acceleration;
+        velX += dirX * acceleration;
+        velY += dirY * acceleration;
         move();
+
     }
 
-    public void draw(Graphics g, double size) {
+    public void draw(Graphics g, double size)
+    {
         g.setColor(color);
-        g.fillOval((int)(650+(xLoc-diameter/2-650)*size), (int)(500+(yLoc-diameter/2-500)*size),
+        g.fillOval((int)(650+(xLoc-diameter/2.0-650)*size), (int)(500+(yLoc-diameter/2.0-500)*size),
                 (int)(diameter*size), (int)(diameter*size));
     }
 
 
-   public void dispDesc(Graphics g, double scale) {
+    public void dispDesc(Graphics g, double scale)
+    {
         g.setColor(color);
         for (int[] orbit : orbitDots)
             g.drawLine(orbit[0],orbit[1],orbit[0],orbit[1]);
         g.setFont(new Font("Arial", Font.PLAIN, 10));
         g.setColor(Color.MAGENTA);
-        //gangeri ni apaan dan kenapa error:(((((
-        //g.drawString((Math.round(distance*100.0)/100.0) * 1000000 + " km",
-          //       diameter+ (int) (600+(xLoc-diameter/2-600)*scale), 16+(float)(400+(yLoc-diameter/2-400)*scale)+diameter);
 
-   }
+        g.drawString((Math.round(distance*100.0)/100.0) * 1000000 + " km",
+                diameter+(int) (600+(xLoc-diameter/2.0-600)*scale), 16+(int)(400+(yLoc-diameter/2.0-400)*scale)+diameter);
 
-    public boolean hitPlanet(int x, int y, double scale) {
-        return (x>600+(getXPosition()-diameter-600)*scale && x<600+(getXPosition()+diameter-600)*scale &&
-                y>400+(getYPosition()-diameter-400)*scale && y<400+(getYPosition()+diameter-400)*scale);
     }
+
+
 
 
 }

@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.util.Scanner;
 
 class NumberOfMenu{
@@ -59,9 +60,10 @@ class MenuThread extends Thread{
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        float set_r, set_p_orbit, set_t_rotasi, set_t_revolusi;
-        int menu;
+        float  set_p_orbit, set_t_rotasi, set_t_revolusi;
+        int set_r, menu;
         char yes_no;
+
         Bola bola = new Bola();
         Mercury mercury = new Mercury();
         Venus venus = new Venus();
@@ -71,7 +73,8 @@ public class Main {
         Saturn saturn = new Saturn();
         Uranus uranus = new Uranus();
         Neptune neptune = new Neptune();
-
+        SolarSystemGeneral solarSystemGeneral = new SolarSystemGeneral();
+        //CelestialBody celestialBody = new CelestialBody();
         do{
             System.out.println("This is Planets System's Data");
             System.out.println("What do you want to know?");
@@ -95,6 +98,7 @@ public class Main {
                     set_r = input.nextInt();
                     mercury.setVolumeAndSurface(set_r);
                     mercury.setPanjangLintasanRotasi(set_r);
+                    mercury.setDiameter(set_r);
                     System.out.println("Panjang lintasan rotasi atau keliling planet : " + mercury.getPanjangLintasanRotasi());
                     System.out.println("Mercury's Volume : " + mercury.getMercuryVolume());
                     System.out.println("Mercury's Surface : " + mercury.getMercurySurface());
@@ -114,6 +118,13 @@ public class Main {
                     //Masih kurang :
                     //ilustrasi volume
                     //Ilustrasi pergerakan
+                    System.out.println("Lihat ilustrasi pergerakan?  ");
+                    yes_no = input.next().charAt(0);
+                    if(yes_no == 'y' || yes_no == 'Y') {
+                        System.out.println("Diameter Mercury: "+mercury.getDiameter());
+                        solarSystemGeneral.diameter=mercury.getDiameter();
+                        solarSystemGeneral.main(null);
+                    }
                     break;
 
                 case 2:
