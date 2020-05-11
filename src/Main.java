@@ -159,6 +159,18 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + venus.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + venus.getRevolutionVelocity());
+
+                    //Ilustrasi volume
+                    venusIllustration.main(null);
+
+                    //Ilustrasi pergerakan
+                    System.out.println("Lihat ilustrasi pergerakan?  ");
+                    yes_no = input.next().charAt(0);
+                    if(yes_no == 'y' || yes_no == 'Y') {
+                        System.out.println("Diameter Venus: " + venus.getDiameter());
+                        solarSystemGeneral.diameter = venus.getDiameter();
+                        solarSystemGeneral.main(null);
+                    }
                     break;
 
                 case 3:
@@ -182,6 +194,17 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + earth.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + earth.getRevolutionVelocity());
+                    //Ilustrasi volume
+                    earthIllustration.main(null);
+
+                    //Ilustrasi pergerakan
+                    System.out.println("Lihat ilustrasi pergerakan?  ");
+                    yes_no = input.next().charAt(0);
+                    if(yes_no == 'y' || yes_no == 'Y') {
+                        System.out.println("Diameter Earth: " + earth.getDiameter());
+                        solarSystemGeneral.diameter = earth.getDiameter();
+                        solarSystemGeneral.main(null);
+                    }
                     break;
 
                 case 4:
@@ -205,6 +228,17 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + mars.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + mars.getRevolutionVelocity());
+                    //Ilustrasi volume
+                    marsIllustration.main(null);
+
+                    //Ilustrasi pergerakan
+                    System.out.println("Lihat ilustrasi pergerakan?  ");
+                    yes_no = input.next().charAt(0);
+                    if(yes_no == 'y' || yes_no == 'Y') {
+                        System.out.println("Diameter Mars: " + mars.getDiameter());
+                        solarSystemGeneral.diameter = mars.getDiameter();
+                        solarSystemGeneral.main(null);
+                    }
                     break;
 
                 case 5:
@@ -228,6 +262,17 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + jupyter.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + jupyter.getRevolutionVelocity());
+                    //Ilustrasi volume
+                    jupyterIllustration.main(null);
+
+                    //Ilustrasi pergerakan
+                    System.out.println("Lihat ilustrasi pergerakan?  ");
+                    yes_no = input.next().charAt(0);
+                    if(yes_no == 'y' || yes_no == 'Y') {
+                        System.out.println("Diameter Jupyter: " + jupyter.getDiameter());
+                        solarSystemGeneral.diameter = jupyter.getDiameter();
+                        solarSystemGeneral.main(null);
+                    }
                     break;
 
                 case 6:
@@ -251,6 +296,17 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + saturn.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + saturn.getRevolutionVelocity());
+                    //Ilustrasi volume
+                    saturnIllustration.main(null);
+
+                    //Ilustrasi pergerakan
+                    System.out.println("Lihat ilustrasi pergerakan?  ");
+                    yes_no = input.next().charAt(0);
+                    if(yes_no == 'y' || yes_no == 'Y') {
+                        System.out.println("Diameter Saturn: " + saturn.getDiameter());
+                        solarSystemGeneral.diameter = saturn.getDiameter();
+                        solarSystemGeneral.main(null);
+                    }
                     break;
 
                 case 7:
@@ -274,6 +330,17 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + uranus.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + uranus.getRevolutionVelocity());
+                    //Ilustrasi volume
+                    uranusIllustration.main(null);
+
+                    //Ilustrasi pergerakan
+                    System.out.println("Lihat ilustrasi pergerakan?  ");
+                    yes_no = input.next().charAt(0);
+                    if(yes_no == 'y' || yes_no == 'Y') {
+                        System.out.println("Diameter Uranus: " + uranus.getDiameter());
+                        solarSystemGeneral.diameter = uranus.getDiameter();
+                        solarSystemGeneral.main(null);
+                    }
                     break;
 
                 case 8:
@@ -297,6 +364,17 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + neptune.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + neptune.getRevolutionVelocity());
+                    //Ilustrasi volume
+                    neptuneIllustration.main(null);
+
+                    //Ilustrasi pergerakan
+                    System.out.println("Lihat ilustrasi pergerakan?  ");
+                    yes_no = input.next().charAt(0);
+                    if(yes_no == 'y' || yes_no == 'Y') {
+                        System.out.println("Diameter Neptune: " + neptune.getDiameter());
+                        solarSystemGeneral.diameter = neptune.getDiameter();
+                        solarSystemGeneral.main(null);
+                    }
                     break;
 
                 default:

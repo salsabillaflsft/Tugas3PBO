@@ -27,9 +27,10 @@ public class EarthIllustration extends Application {
     private final DoubleProperty angleY = new SimpleDoubleProperty(0);
 
     Bola b = new Bola();
+    float r = b.getR();
     private final Sphere sphere = new Sphere(150);
     //Sphere sphere = new Sphere(b.getR());
-    float r;
+    //float r;
 
 
     @Override

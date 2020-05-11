@@ -26,7 +26,8 @@ public class NeptuneIllustration<r> extends Application {
     private final DoubleProperty angleX = new SimpleDoubleProperty(0);
     private final DoubleProperty angleY = new SimpleDoubleProperty(0);
 
-
+    Neptune n = new Neptune();
+    float r = n.getR();
     private final Sphere sphere = new Sphere(150);
     //Sphere sphere = new Sphere(b.getR());
 

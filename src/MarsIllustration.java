@@ -26,7 +26,8 @@ public class MarsIllustration<r> extends Application {
     private final DoubleProperty angleX = new SimpleDoubleProperty(0);
     private final DoubleProperty angleY = new SimpleDoubleProperty(0);
 
-
+    Mars mr = new Mars();
+    float r = mr.getR();
     private final Sphere sphere = new Sphere(150);
     //Sphere sphere = new Sphere(b.getR());
 

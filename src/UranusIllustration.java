@@ -26,7 +26,8 @@ public class UranusIllustration<r> extends Application {
     private final DoubleProperty angleX = new SimpleDoubleProperty(0);
     private final DoubleProperty angleY = new SimpleDoubleProperty(0);
 
-
+    Uranus u = new Uranus();
+    float r = u.getR();
     private final Sphere sphere = new Sphere(150);
     //Sphere sphere = new Sphere(b.getR());
 
