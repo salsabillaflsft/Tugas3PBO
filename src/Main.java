@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 class NumberOfMenu{
     synchronized void printNumber(int num, String menuName){
         //for (int i=1;i<=9;i++){
@@ -383,11 +385,15 @@ public class Main {
                 case 9:
                     solarSystemGeneral.main(null);
 
+                case 10:
+                    exit(0);
+
                 default:
                     break;
             }
             System.out.println("Pilih menu lagi?");
             yes_no = input.next().charAt(0);
         } while (yes_no == 'y' || yes_no == 'Y');
+        exit(0);
     }
 }
