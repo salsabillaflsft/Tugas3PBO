@@ -131,9 +131,6 @@ public class Main {
                     System.out.println("Kecepatan revolusi : " + mercury.getRevolutionVelocity());
 
                     //Ilustrasi volume
-                    System.out.println("Tekan W untuk zoom out");
-                    System.out.println("Tekan S untuk zoom in");
-                    System.out.println("Drag dengan mouse untuk memutar planet");
                     mercuryIllustration.main(null);
 
                     //Ilustrasi pergerakan
@@ -169,9 +166,6 @@ public class Main {
                     System.out.println("Kecepatan revolusi : " + venus.getRevolutionVelocity());
 
                     //Ilustrasi volume
-                    System.out.println("Tekan W untuk zoom out");
-                    System.out.println("Tekan S untuk zoom in");
-                    System.out.println("Drag dengan mouse untuk memutar planet");
                     venusIllustration.main(null);
 
                     //Ilustrasi pergerakan
@@ -205,11 +199,7 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + earth.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + earth.getRevolutionVelocity());
-
                     //Ilustrasi volume
-                    System.out.println("Tekan W untuk zoom out");
-                    System.out.println("Tekan S untuk zoom in");
-                    System.out.println("Drag dengan mouse untuk memutar planet");
                     earthIllustration.main(null);
 
                     //Ilustrasi pergerakan
@@ -243,11 +233,7 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + mars.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + mars.getRevolutionVelocity());
-
                     //Ilustrasi volume
-                    System.out.println("Tekan W untuk zoom out");
-                    System.out.println("Tekan S untuk zoom in");
-                    System.out.println("Drag dengan mouse untuk memutar planet");
                     marsIllustration.main(null);
 
                     //Ilustrasi pergerakan
@@ -281,11 +267,7 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + jupyter.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + jupyter.getRevolutionVelocity());
-
                     //Ilustrasi volume
-                    System.out.println("Tekan W untuk zoom out");
-                    System.out.println("Tekan S untuk zoom in");
-                    System.out.println("Drag dengan mouse untuk memutar planet");
                     jupyterIllustration.main(null);
 
                     //Ilustrasi pergerakan
@@ -319,11 +301,7 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + saturn.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + saturn.getRevolutionVelocity());
-
                     //Ilustrasi volume
-                    System.out.println("Tekan W untuk zoom out");
-                    System.out.println("Tekan S untuk zoom in");
-                    System.out.println("Drag dengan mouse untuk memutar planet");
                     saturnIllustration.main(null);
 
                     //Ilustrasi pergerakan
@@ -357,11 +335,7 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + uranus.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + uranus.getRevolutionVelocity());
-
                     //Ilustrasi volume
-                    System.out.println("Tekan W untuk zoom out");
-                    System.out.println("Tekan S untuk zoom in");
-                    System.out.println("Drag dengan mouse untuk memutar planet");
                     uranusIllustration.main(null);
 
                     //Ilustrasi pergerakan
@@ -395,11 +369,7 @@ public class Main {
 
                     System.out.println("Kecepatan rotasi : " + neptune.getRotationVelocity());
                     System.out.println("Kecepatan revolusi : " + neptune.getRevolutionVelocity());
-
                     //Ilustrasi volume
-                    System.out.println("Tekan W untuk zoom out");
-                    System.out.println("Tekan S untuk zoom in");
-                    System.out.println("Drag dengan mouse untuk memutar planet");
                     neptuneIllustration.main(null);
 
                     //Ilustrasi pergerakan

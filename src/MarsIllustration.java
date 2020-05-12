@@ -28,7 +28,8 @@ public class MarsIllustration<r> extends Application {
 
     Mars mr = new Mars();
     float r = mr.getR();
-    private final Sphere sphere = new Sphere(150);
+    //data radius asli 3389.5 km, di konversi untuk ilustrasi menjadi 33.895
+    private final Sphere sphere = new Sphere(33.895);
     //Sphere sphere = new Sphere(b.getR());
 
 
@@ -52,7 +53,7 @@ public class MarsIllustration<r> extends Application {
 
         initMouseControl(world, scene, primaryStage);
 
-        primaryStage.setTitle("Genuine Coder");
+        primaryStage.setTitle("Volume Illustration");
         primaryStage.setScene(scene);
         primaryStage.show();
 

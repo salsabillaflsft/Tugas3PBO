@@ -28,7 +28,8 @@ public class MercuryIllustration<r> extends Application {
 
     Mercury m = new Mercury();
     float r = m.getR();
-    private final Sphere sphere = new Sphere(150);
+    //data radius asli 2439.7 km, di konversi untuk ilustrasi menjadi 24.397
+    private final Sphere sphere = new Sphere(24.397);
     //Sphere sphere = new Sphere(b.getR());
 
 
@@ -52,7 +53,7 @@ public class MercuryIllustration<r> extends Application {
 
         initMouseControl(world, scene, primaryStage);
 
-        primaryStage.setTitle("Genuine Coder");
+        primaryStage.setTitle("Volume Illustration");
         primaryStage.setScene(scene);
         primaryStage.show();
 

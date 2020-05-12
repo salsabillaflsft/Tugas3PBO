@@ -28,7 +28,8 @@ public class JupyterIllustration<r> extends Application {
 
     Jupyter j = new Jupyter();
     float r = j.getR();
-    private final Sphere sphere = new Sphere(150);
+    //data radius asli 69911 km, di konversi untuk ilustrasi menjadi 699.11
+    private final Sphere sphere = new Sphere(699.11);
     //Sphere sphere = new Sphere(b.getR());
 
 
@@ -52,7 +53,7 @@ public class JupyterIllustration<r> extends Application {
 
         initMouseControl(world, scene, primaryStage);
 
-        primaryStage.setTitle("Genuine Coder");
+        primaryStage.setTitle("Volume Illustration");
         primaryStage.setScene(scene);
         primaryStage.show();
 

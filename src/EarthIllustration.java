@@ -28,7 +28,8 @@ public class EarthIllustration extends Application {
 
     Bola b = new Bola();
     float r = b.getR();
-    private final Sphere sphere = new Sphere(150);
+    //data radius asli 6371 km, di konversi untuk ilustrasi menjadi 63.71
+    private final Sphere sphere = new Sphere(63.71);
     //Sphere sphere = new Sphere(b.getR());
     //float r;
 
@@ -53,7 +54,7 @@ public class EarthIllustration extends Application {
 
         initMouseControl(world, scene, primaryStage);
 
-        primaryStage.setTitle("Genuine Coder");
+        primaryStage.setTitle("Volume Illustration");
         primaryStage.setScene(scene);
         primaryStage.show();
 

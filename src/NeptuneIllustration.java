@@ -28,7 +28,8 @@ public class NeptuneIllustration<r> extends Application {
 
     Neptune n = new Neptune();
     float r = n.getR();
-    private final Sphere sphere = new Sphere(150);
+    //data radius asli 24622 km, di konversi untuk ilustrasi menjadi 246.22
+    private final Sphere sphere = new Sphere(246.22);
     //Sphere sphere = new Sphere(b.getR());
 
 
@@ -52,7 +53,7 @@ public class NeptuneIllustration<r> extends Application {
 
         initMouseControl(world, scene, primaryStage);
 
-        primaryStage.setTitle("Genuine Coder");
+        primaryStage.setTitle("Volume Illustration");
         primaryStage.setScene(scene);
         primaryStage.show();
 

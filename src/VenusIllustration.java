@@ -28,7 +28,8 @@ public class VenusIllustration<r> extends Application {
 
     Venus v = new Venus();
     float r = v.getR();
-    private final Sphere sphere = new Sphere(150);
+    //data radius asli 6051.8 km, di konversi untuk ilustrasi menjadi 60.518
+    private final Sphere sphere = new Sphere(60.518);
     //Sphere sphere = new Sphere(b.getR());
 
 
@@ -52,7 +53,7 @@ public class VenusIllustration<r> extends Application {
 
         initMouseControl(world, scene, primaryStage);
 
-        primaryStage.setTitle("Genuine Coder");
+        primaryStage.setTitle("Volume Illustration");
         primaryStage.setScene(scene);
         primaryStage.show();
 

@@ -28,7 +28,8 @@ public class SaturnIllustration<r> extends Application {
 
     Saturn s = new Saturn();
     float r = s.getR();
-    private final Sphere sphere = new Sphere(150);
+    //data radius asli 58232 km, di konversi untuk ilustrasi menjadi 582.32
+    private final Sphere sphere = new Sphere(582.32);
     //Sphere sphere = new Sphere(b.getR());
 
 
@@ -52,7 +53,7 @@ public class SaturnIllustration<r> extends Application {
 
         initMouseControl(world, scene, primaryStage);
 
-        primaryStage.setTitle("Genuine Coder");
+        primaryStage.setTitle("Volume Illustration");
         primaryStage.setScene(scene);
         primaryStage.show();
 

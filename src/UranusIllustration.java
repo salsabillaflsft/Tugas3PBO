@@ -28,7 +28,8 @@ public class UranusIllustration<r> extends Application {
 
     Uranus u = new Uranus();
     float r = u.getR();
-    private final Sphere sphere = new Sphere(150);
+    //data radius asli 25362 km, di konversi untuk ilustrasi menjadi 253.62
+    private final Sphere sphere = new Sphere(253.62);
     //Sphere sphere = new Sphere(b.getR());
 
 
@@ -52,7 +53,7 @@ public class UranusIllustration<r> extends Application {
 
         initMouseControl(world, scene, primaryStage);
 
-        primaryStage.setTitle("Genuine Coder");
+        primaryStage.setTitle("Volume Illustration");
         primaryStage.setScene(scene);
         primaryStage.show();
 
